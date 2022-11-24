@@ -9,7 +9,18 @@ To run this software, you need:
 - python3 (tested with version 3.6.3)
 - TensorFlow (tested with version 1.10.1)
 
-
+## Environment
+```
+conda create -y -n physnet python=3.5
+conda activate physnet
+conda install -y tensorflow-gpu=1.10.0
+conda install -y ipykernel
+ipython kernel install --user --name=physnet
+#
+conda deactivate
+conda env list
+conda env remove -n physnet
+```
 
 ## How to use
 
@@ -19,6 +30,14 @@ Edit the config.txt file to specify hyperparameters, dataset location, training/
 Then, simply run
 
 ```
+# Prepare data
+mkdir data && cd data
+wget https://zenodo.org/record/2605341/files/sn2_reactions.npz
+wget https://zenodo.org/record/2605341/files/README.txt
+wget https://zenodo.org/record/2605341/files/read_data.py
+cd ..
+
+# Training
 python3 train.py 
 ```
 
