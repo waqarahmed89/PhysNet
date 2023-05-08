@@ -11,15 +11,15 @@ To run this software, you need:
 
 ## Environment
 ```
-conda create -y -n physnet python=3.5
+conda create -y -n physnet python=3.6 #3.5
 conda activate physnet
 conda install -y tensorflow-gpu=1.10.0
 conda install -y ipykernel
 ipython kernel install --user --name=physnet
 #
 conda deactivate
-conda env list
 conda env remove -n physnet
+conda env list
 ```
 
 ## How to use

@@ -2,8 +2,8 @@ import tensorflow as tf
 import numpy as np
 import ase
 from ase.neighborlist import neighbor_list
-from .neural_network.NeuralNetwork import *
-from .neural_network.activation_fn import *
+from neural_network.NeuralNetwork import *
+from neural_network.activation_fn import *
 
 '''
 Calculator for the atomic simulation environment (ASE)
