@@ -16,10 +16,6 @@ conda activate physnet
 conda install -y tensorflow-gpu=1.10.0
 conda install -y ipykernel
 ipython kernel install --user --name=physnet
-#
-conda deactivate
-conda env remove -n physnet
-conda env list
 ```
 
 ## How to use
@@ -37,7 +33,7 @@ wget https://zenodo.org/record/2605341/files/README.txt
 wget https://zenodo.org/record/2605341/files/read_data.py
 cd ..
 
-# Training
+# Training! Remember to choose correct config file in train.py 
 python3 train.py 
 ```
 
